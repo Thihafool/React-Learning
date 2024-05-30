@@ -112,7 +112,33 @@ function App() {
               State
             </TabButton>
           </menu>
-          {tabContent}
+          {/* {!tabContent ? <p>Please select a topic</p> : null}
+          {tabContent ? (
+            <div id="tab-content">
+              <h3>{EXAMPLES[tabContent].title}</h3>
+              <p>{EXAMPLES[tabContent].description}</p>
+              <code>{EXAMPLES[tabContent].code}</code>
+            </div>
+          ) : null} */}
+
+          {!tabContent && <p>Please select a topic</p>}
+          {tabContent && (
+            <div id="tab-content">
+              <h3>{EXAMPLES[tabContent].title}</h3>
+              <p>{EXAMPLES[tabContent].description}</p>
+              <code>{EXAMPLES[tabContent].code}</code>
+            </div>
+          )}
+
+          {/* {!tabContent ? (
+            <p>Please select a topic</p>
+          ) : (
+            <div id="tab-content">
+              <h3>{EXAMPLES[tabContent].title}</h3>
+              <p>{EXAMPLES[tabContent].description}</p>
+              <code>{EXAMPLES[tabContent].code}</code>
+            </div>
+          )} */}
         </section>
       </main>
     </div>
